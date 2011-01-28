@@ -1,0 +1,4 @@
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc ${1:NEWS README} || die "dodoc failed"
+}
