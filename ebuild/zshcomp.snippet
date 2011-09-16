@@ -1,5 +1,3 @@
-if use zsh-completion; then
-	insinto /usr/share/zsh/site-functions
-	newins ${1:file} ${2:_`expand("%:p:h:t")`} || die "doins $2 failed"
-fi
+insinto /usr/share/zsh/site-functions
+newins ${1:file} ${2:_`expand("%:p:h:t")`}
 ${3}
